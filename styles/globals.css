@@ -16,14 +16,36 @@ body{
   align-items: center;
   transform-style:preserve-3d;
   transform: perspective(1000px);
+  background: #141414;
   
 }
+
+.icon {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+button{
+  position: absolute;
+  background-color: rgb(20, 20, 20);
+  border-radius: 8px;
+  height: 30px;
+  width: 30px;
+  top: 30px;
+  right: 30px;
+  z-index: 3;
+  border: white 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .list .item{
   transition: .5s;
   filter: brightness(0);
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   overflow: hidden;
-  margin: 2px;
+  padding: 2px;
 }
 .list .item:hover{
   filter: brightness(1);
@@ -31,15 +53,15 @@ body{
 }
 .list .item:hover + *{
   filter: brightness(0.6);
-  transform: translateZ(150px) rotateY(40deg);
+  transform: translateZ(100px) rotateY(40deg);
 }
 .list .item:hover + * + *{
   filter: brightness(0.4);
-  transform: translateZ(70px) rotateY(20deg);
+  transform: translateZ(60px) rotateY(30deg);
 }
 .list .item:hover + * + * + *{
   filter: brightness(0.2);
-  transform: translateZ(30px) rotateY(10deg);
+  transform: translateZ(20px) rotateY(30deg);
 }
 .list .item:has( + *:hover){
   filter: brightness(0.6);
@@ -47,9 +69,15 @@ body{
 }
 .list .item:has( + * + *:hover){
   filter: brightness(0.4);
-  transform: translateZ(70px) rotateY(-20deg);
+  transform: translateZ(70px) rotateY(-30deg);
 }
 .list .item:has( + * + * + *:hover){
   filter: brightness(0.2);
-  transform: translateZ(30px) rotateY(-10deg);
+  transform: translateZ(30px) rotateY(-30deg);
+}
+.list .item image {
+  object-fit: fill;
+}
+.list .item {
+  object-fit: fill;
 }
