@@ -9,7 +9,6 @@ export default function Home() {
   const [fullScreen,setFullScreen] = useState(false)
 
   const toggleFullScreen = ()=>{
-    setFullScreen(!fullScreen)
     const element = document.getElementById("body")
    if(!fullScreen){
     element?.requestFullscreen()
@@ -31,7 +30,7 @@ export default function Home() {
         <link rel="icon" href="/PHOTO.png" />
       </Head>
      <main id="body">
-      <button onClick={toggleFullScreen} className="fullscreen">{fullScreen ? <MdFullscreen className="icon"/> :<MdFullscreenExit className="icon"/>}</button>
+      <button onClick={toggleFullScreen} className="fullscreen">{fullScreen ? <MdFullscreenExit className="icon"/> :<MdFullscreen className="icon"/>}</button>
       <div className="list">
       <div className="item"><Image src="/1.jpeg" alt="" height={96} width={64}/></div>
       <div className="item"><Image src="/2.jpg" alt="" height={96} width={64}/></div>
