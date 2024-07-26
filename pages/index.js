@@ -20,7 +20,7 @@ export default function Home() {
     }
   }
   }
-  
+
   return (
     <body >
       <Head>
@@ -31,6 +31,9 @@ export default function Home() {
       </Head>
      <main id="body">
       <button onClick={toggleFullScreen} className="fullscreen">{fullScreen ? <MdFullscreenExit className="icon"/> :<MdFullscreen className="icon"/>}</button>
+      <div className="heading">
+        <h1>Animation NextJs</h1>
+        </div>
       <div className="list">
       <div className="item"><Image src="/1.jpeg" alt="" height={96} width={64}/></div>
       <div className="item"><Image src="/2.jpg" alt="" height={96} width={64}/></div>
